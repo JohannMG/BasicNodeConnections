@@ -14,6 +14,8 @@
 		2D168C311C9A4B11002677D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D168C2F1C9A4B11002677D6 /* LaunchScreen.storyboard */; };
 		2D168C3C1C9A4B11002677D6 /* BasicNodeConnectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D168C3B1C9A4B11002677D6 /* BasicNodeConnectionsTests.swift */; };
 		2D168C471C9A4B11002677D6 /* BasicNodeConnectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D168C461C9A4B11002677D6 /* BasicNodeConnectionsUITests.swift */; };
+		2D168C551C9A4CC6002677D6 /* NodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D168C541C9A4CC6002677D6 /* NodeView.xib */; };
+		2D168C571C9A4D8D002677D6 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D168C561C9A4D8D002677D6 /* NodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2D168C421C9A4B11002677D6 /* BasicNodeConnectionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicNodeConnectionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D168C461C9A4B11002677D6 /* BasicNodeConnectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNodeConnectionsUITests.swift; sourceTree = "<group>"; };
 		2D168C481C9A4B11002677D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D168C541C9A4CC6002677D6 /* NodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NodeView.xib; path = Views/NodeView.xib; sourceTree = "<group>"; };
+		2D168C561C9A4D8D002677D6 /* NodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeView.swift; path = Views/NodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,10 @@
 		2D168C251C9A4B11002677D6 /* BasicNodeConnections */ = {
 			isa = PBXGroup;
 			children = (
-				2D168C261C9A4B11002677D6 /* AppDelegate.swift */,
+				2D2374561C9A52A400F1D095 /* Supporting Files */,
 				2D168C281C9A4B11002677D6 /* ViewController.swift */,
 				2D168C2A1C9A4B11002677D6 /* Main.storyboard */,
-				2D168C2D1C9A4B11002677D6 /* Assets.xcassets */,
-				2D168C2F1C9A4B11002677D6 /* LaunchScreen.storyboard */,
-				2D168C321C9A4B11002677D6 /* Info.plist */,
+				2D2374551C9A529900F1D095 /* Views */,
 			);
 			path = BasicNodeConnections;
 			sourceTree = "<group>";
@@ -123,6 +125,26 @@
 				2D168C481C9A4B11002677D6 /* Info.plist */,
 			);
 			path = BasicNodeConnectionsUITests;
+			sourceTree = "<group>";
+		};
+		2D2374551C9A529900F1D095 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D168C541C9A4CC6002677D6 /* NodeView.xib */,
+				2D168C561C9A4D8D002677D6 /* NodeView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2D2374561C9A52A400F1D095 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D168C261C9A4B11002677D6 /* AppDelegate.swift */,
+				2D168C2D1C9A4B11002677D6 /* Assets.xcassets */,
+				2D168C2F1C9A4B11002677D6 /* LaunchScreen.storyboard */,
+				2D168C321C9A4B11002677D6 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +253,7 @@
 			files = (
 				2D168C311C9A4B11002677D6 /* LaunchScreen.storyboard in Resources */,
 				2D168C2E1C9A4B11002677D6 /* Assets.xcassets in Resources */,
+				2D168C551C9A4CC6002677D6 /* NodeView.xib in Resources */,
 				2D168C2C1C9A4B11002677D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +281,7 @@
 			files = (
 				2D168C291C9A4B11002677D6 /* ViewController.swift in Sources */,
 				2D168C271C9A4B11002677D6 /* AppDelegate.swift in Sources */,
+				2D168C571C9A4D8D002677D6 /* NodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +508,7 @@
 				2D168C4D1C9A4B11002677D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D168C4E1C9A4B11002677D6 /* Build configuration list for PBXNativeTarget "BasicNodeConnectionsTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +517,7 @@
 				2D168C501C9A4B11002677D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D168C511C9A4B11002677D6 /* Build configuration list for PBXNativeTarget "BasicNodeConnectionsUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +526,7 @@
 				2D168C531C9A4B11002677D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
