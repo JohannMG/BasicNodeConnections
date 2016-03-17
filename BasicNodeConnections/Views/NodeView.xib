@@ -21,8 +21,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-9F-4h5" userLabel="Image Input Button">
-                    <rect key="frame" x="0.0" y="50" width="15" height="15"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-9F-4h5" userLabel="Image Input Button" customClass="NodeInputOutputButton" customModule="BasicNodeConnections" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="38" width="15" height="15"/>
                     <color key="backgroundColor" red="0.47405492639767466" green="0.93207277468213812" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="e4V-de-faa"/>
@@ -33,31 +33,54 @@
                             <integer key="value" value="9"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="imageInputTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="CX9-Ku-jGE"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxX-tq-HBh" userLabel="Mask Input Button">
-                    <rect key="frame" x="0.0" y="113" width="15" height="15"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxX-tq-HBh" userLabel="Mask Input Button" customClass="NodeInputOutputButton" customModule="BasicNodeConnections" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="122" width="15" height="15"/>
                     <color key="backgroundColor" red="0.47405492640000002" green="0.93207277470000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="SnV-c3-dA7"/>
+                        <constraint firstAttribute="height" constant="15" id="gIY-g9-TwT"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="9"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="maskInputTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="X5D-mL-qN9"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-lh-Fap">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-lh-Fap" userLabel="Image Computed Output" customClass="NodeInputOutputButton" customModule="BasicNodeConnections" customModuleProvider="target">
                     <rect key="frame" x="285" y="80" width="15" height="15"/>
                     <color key="backgroundColor" red="0.47405492640000002" green="0.93207277470000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="JmB-M1-TWs"/>
+                        <constraint firstAttribute="width" constant="15" id="kQy-p2-LtJ"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="9"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="imageOutputTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z1l-2O-9PV"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>
+                <constraint firstItem="m1P-lh-Fap" firstAttribute="centerY" secondItem="4NC-gV-Oct" secondAttribute="centerY" id="4ba-SZ-CgF"/>
+                <constraint firstItem="rxX-tq-HBh" firstAttribute="bottom" secondItem="4NC-gV-Oct" secondAttribute="bottom" constant="14" id="D7f-gv-qt5"/>
+                <constraint firstAttribute="trailing" secondItem="m1P-lh-Fap" secondAttribute="trailing" id="FIO-dA-osZ"/>
                 <constraint firstItem="4NC-gV-Oct" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="R3l-Z2-orR"/>
+                <constraint firstItem="rxX-tq-HBh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nZh-9F-4h5" secondAttribute="bottom" constant="45" id="TvI-qk-5ch"/>
                 <constraint firstAttribute="trailing" secondItem="4NC-gV-Oct" secondAttribute="trailing" constant="8" id="ayJ-XI-iN7"/>
+                <constraint firstItem="rxX-tq-HBh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dQD-8Y-qoJ"/>
                 <constraint firstItem="nZh-9F-4h5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fYw-s4-HzI"/>
-                <constraint firstItem="nZh-9F-4h5" firstAttribute="top" secondItem="4NC-gV-Oct" secondAttribute="top" constant="17" id="kej-rn-CsO"/>
+                <constraint firstItem="rxX-tq-HBh" firstAttribute="bottom" secondItem="4NC-gV-Oct" secondAttribute="bottom" constant="-5" id="fzS-nx-gPW"/>
+                <constraint firstItem="nZh-9F-4h5" firstAttribute="top" secondItem="4NC-gV-Oct" secondAttribute="top" constant="5" id="kej-rn-CsO"/>
                 <constraint firstAttribute="trailing" secondItem="cYy-H0-a5S" secondAttribute="trailing" constant="8" id="lre-Tx-tdY"/>
                 <constraint firstItem="cYy-H0-a5S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="sOI-vX-3ek"/>
                 <constraint firstItem="4NC-gV-Oct" firstAttribute="top" secondItem="cYy-H0-a5S" secondAttribute="bottom" constant="8" id="xYn-h8-QHr"/>
@@ -66,7 +89,16 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="D7f-gv-qt5"/>
+                    <exclude reference="TvI-qk-5ch"/>
+                </mask>
+            </variation>
             <connections>
+                <outlet property="imageInputButton" destination="nZh-9F-4h5" id="ZCs-6I-d1E"/>
+                <outlet property="imageOutputButton" destination="m1P-lh-Fap" id="e8E-th-r2p"/>
+                <outlet property="maskInputButton" destination="rxX-tq-HBh" id="X3I-vj-b0a"/>
                 <outlet property="nodeBodyView" destination="4NC-gV-Oct" id="ykm-Ff-7nd"/>
                 <outlet property="nodeNameLabel" destination="cYy-H0-a5S" id="eUj-WW-LSi"/>
             </connections>

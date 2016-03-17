@@ -52,10 +52,22 @@
                                     <constraint firstAttribute="height" constant="140" id="Fq5-aC-1hQ"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descriptive action and status text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoB-6s-Ki2">
+                                <rect key="frame" x="20" y="566" width="366" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KNK-vv-3iM"/>
+                                    <constraint firstAttribute="width" constant="366" id="khE-1V-htp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.52930710078534027" green="0.52930710078534027" blue="0.52930710078534027" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="a6Y-ap-sPD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7KD-MF-mTf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="YoB-6s-Ki2" secondAttribute="leading" id="AmT-G3-lvc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YoB-6s-Ki2" secondAttribute="bottom" constant="13" id="KiR-df-Hjr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="a6Y-ap-sPD" secondAttribute="leading" id="L4n-xu-7aB"/>
                             <constraint firstItem="dJU-E8-jYh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MnP-Xo-n2u"/>
                             <constraint firstItem="mB6-Lk-BRv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N79-Oi-k1N"/>
@@ -65,6 +77,9 @@
                     </view>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="actionStatusLabel" destination="YoB-6s-Ki2" id="apS-ML-anR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

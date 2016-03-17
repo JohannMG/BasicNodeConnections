@@ -16,6 +16,7 @@
 		2D168C471C9A4B11002677D6 /* BasicNodeConnectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D168C461C9A4B11002677D6 /* BasicNodeConnectionsUITests.swift */; };
 		2D168C551C9A4CC6002677D6 /* NodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D168C541C9A4CC6002677D6 /* NodeView.xib */; };
 		2D168C571C9A4D8D002677D6 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D168C561C9A4D8D002677D6 /* NodeView.swift */; };
+		2D2374581C9B229B00F1D095 /* NodeInputOutputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2374571C9B229B00F1D095 /* NodeInputOutputButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2D168C481C9A4B11002677D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D168C541C9A4CC6002677D6 /* NodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NodeView.xib; path = Views/NodeView.xib; sourceTree = "<group>"; };
 		2D168C561C9A4D8D002677D6 /* NodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeView.swift; path = Views/NodeView.swift; sourceTree = "<group>"; };
+		2D2374571C9B229B00F1D095 /* NodeInputOutputButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeInputOutputButton.swift; path = Views/NodeInputOutputButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				2D168C541C9A4CC6002677D6 /* NodeView.xib */,
 				2D168C561C9A4D8D002677D6 /* NodeView.swift */,
+				2D2374571C9B229B00F1D095 /* NodeInputOutputButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D168C291C9A4B11002677D6 /* ViewController.swift in Sources */,
+				2D2374581C9B229B00F1D095 /* NodeInputOutputButton.swift in Sources */,
 				2D168C271C9A4B11002677D6 /* AppDelegate.swift in Sources */,
 				2D168C571C9A4D8D002677D6 /* NodeView.swift in Sources */,
 			);

@@ -1,33 +1,48 @@
-//
-//  NodeView.swift
-//  BasicNodeConnections
-//
 //  Created by Johann Garces on 3/16/16.
 //  Copyright © 2016 johannmg. All rights reserved.
-//
 
 import UIKit
 
-class NodeView: UIView {
 
+protocol NodeButtonActionDelegate {
+    func nodeButtonWasClickedWithType(type: InputOutType, fromNodeView nodeView: NodeView)
+}
+
+class NodeView: UIView {
+    
+    //UI
     @IBOutlet weak var nodeNameLabel: UILabel!
     @IBOutlet weak var nodeBodyView: UIView!
+    @IBOutlet weak var imageInputButton: NodeInputOutputButton!
+    @IBOutlet weak var maskInputButton: NodeInputOutputButton!
+    @IBOutlet weak var imageOutputButton: NodeInputOutputButton!
+    
+    //State
+    var isActive = true
+    var delegate: NodeButtonActionDelegate?
+    
+    //Node links
+//    var inputMask: 
+    
     
     var isBeingDragged = false
     var dragStartLocation: CGPoint?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setInitialStyles()
+        setInitialValues()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setInitialStyles()
+        setInitialValues()
     }
     
-    func setInitialStyles(){
-        
+    func setInitialValues(){
+//        print("NodeView Init")
+//        imageInputButton.inOutButtonType = InputOutType.ImageInput
+//        maskInputButton.inOutButtonType = InputOutType.MaskInput
+//        imageOutputButton.inOutButtonType = InputOutType.ImageOutput
     }
     
     
@@ -50,6 +65,8 @@ class NodeView: UIView {
         
         dragStartLocation = touch.locationInView(self)
     }
+    
+    // MARK: Dragging Touch Controllers
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesMoved(touches, withEvent: event)
@@ -78,8 +95,33 @@ class NodeView: UIView {
             })
         }
         
+    }
+    
+    //MARK - Node Piping Buttons
+    
+    @IBAction func imageInputTouched(sender: NodeInputOutputButton) {
+        sendButtonPushToDelegate(sender)
+    }
+    
+    @IBAction func maskInputTouched(sender: NodeInputOutputButton) {
+        sendButtonPushToDelegate(sender)
+    }
+
+    @IBAction func imageOutputTouched(sender: NodeInputOutputButton) {
+        sendButtonPushToDelegate(sender)
+    }
+    
+    func sendButtonPushToDelegate(buttonView: NodeInputOutputButton){
         
+        if let delegate = delegate {
+            delegate.nodeButtonWasClickedWithType(buttonView.inOutButtonType!, fromNodeView: self)
+        }
         
     }
+    
+    
+    
+    
+    
 
 }
