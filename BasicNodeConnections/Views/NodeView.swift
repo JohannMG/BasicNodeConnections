@@ -53,10 +53,9 @@ class NodeView: UIView {
     
     
     func setInitialValues(){
-//        print("NodeView Init")
-//        imageInputButton.inOutButtonType = InputOutType.ImageInput
-//        maskInputButton.inOutButtonType = InputOutType.MaskInput
-//        imageOutputButton.inOutButtonType = InputOutType.ImageOutput
+        imageInputButton.inOutButtonType = InputOutType.ImageInput
+        maskInputButton.inOutButtonType = InputOutType.MaskInput
+        imageOutputButton.inOutButtonType = InputOutType.ImageOutput
     }
     
     

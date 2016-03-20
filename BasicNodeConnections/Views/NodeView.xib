@@ -5,9 +5,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NodeView" customModule="BasicNodeConnections" customModuleProvider="target">
+            <connections>
+                <outlet property="imageInputButton" destination="nZh-9F-4h5" id="ktt-CR-U7O"/>
+                <outlet property="imageOutputButton" destination="m1P-lh-Fap" id="NlQ-HP-ifj"/>
+                <outlet property="maskInputButton" destination="rxX-tq-HBh" id="uS5-UO-k69"/>
+                <outlet property="nodeBodyView" destination="4NC-gV-Oct" id="GkD-f6-kia"/>
+                <outlet property="nodeNameLabel" destination="cYy-H0-a5S" id="Yf5-ky-AE4"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NodeView" customModule="BasicNodeConnections" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -34,7 +42,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="imageInputTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="CX9-Ku-jGE"/>
+                        <action selector="imageInputTouched:" destination="-1" eventType="touchUpInside" id="03y-R3-O2a"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxX-tq-HBh" userLabel="Mask Input Button" customClass="NodeInputOutputButton" customModule="BasicNodeConnections" customModuleProvider="target">
@@ -50,7 +58,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="maskInputTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="X5D-mL-qN9"/>
+                        <action selector="maskInputTouched:" destination="-1" eventType="touchUpInside" id="5qM-Oa-c4r"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-lh-Fap" userLabel="Image Computed Output" customClass="NodeInputOutputButton" customModule="BasicNodeConnections" customModuleProvider="target">
@@ -66,7 +74,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="imageOutputTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z1l-2O-9PV"/>
+                        <action selector="imageOutputTouched:" destination="-1" eventType="touchUpInside" id="E5b-Vi-qfb"/>
                     </connections>
                 </button>
             </subviews>
@@ -95,13 +103,6 @@
                     <exclude reference="TvI-qk-5ch"/>
                 </mask>
             </variation>
-            <connections>
-                <outlet property="imageInputButton" destination="nZh-9F-4h5" id="ZCs-6I-d1E"/>
-                <outlet property="imageOutputButton" destination="m1P-lh-Fap" id="e8E-th-r2p"/>
-                <outlet property="maskInputButton" destination="rxX-tq-HBh" id="X3I-vj-b0a"/>
-                <outlet property="nodeBodyView" destination="4NC-gV-Oct" id="ykm-Ff-7nd"/>
-                <outlet property="nodeNameLabel" destination="cYy-H0-a5S" id="eUj-WW-LSi"/>
-            </connections>
             <point key="canvasLocation" x="384.5" y="213.5"/>
         </view>
     </objects>
