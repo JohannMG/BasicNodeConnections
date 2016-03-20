@@ -28,16 +28,15 @@ class ViewController: UIViewController {
 
     @IBAction func addNodeButton(sender: UIButton) {
         
-        let newNode = getNewNodeView()
-        newNode.frame = CGRect(origin: CGPoint(x: 50.5, y: 50.5), size: standardNodeViewSize)
-        newNode.delegate = self
-        view.addSubview(newNode)
+        createNewImageNodeAtLocation()
         
     }
     
-    func getNewNodeView() -> NodeView {
-        let newView = UINib(nibName: "NodeView", bundle: NSBundle.mainBundle()).instantiateWithOwner(self, options: nil)[0] as! NodeView
-        return newView
+    func createNewImageNodeAtLocation(){
+        
+        let newNode = NodeView(frame: CGRect(origin: CGPoint(x: 60, y: 60), size: standardNodeViewSize))
+        view.addSubview(newNode)
+        newNode.delegate = self
     }
 }
 

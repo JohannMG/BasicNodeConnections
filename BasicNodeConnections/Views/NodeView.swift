@@ -23,20 +23,34 @@ class NodeView: UIView {
     
     //Node links
 //    var inputMask: 
-    
+    var customView: UIView!
     
     var isBeingDragged = false
     var dragStartLocation: CGPoint?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        customView = NSBundle.mainBundle().loadNibNamed("NodeView", owner: self, options: nil).first as! UIView
+        customView.frame = self.bounds
+        if frame.isEmpty{
+            self.bounds = customView.bounds
+        }
+        addSubview(customView)
+        
         setInitialValues()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        if self.subviews.count == 0 {
+            customView = NSBundle.mainBundle().loadNibNamed("NodeView", owner: self, options: nil)[0] as! UIView
+            customView.frame = self.bounds
+            addSubview(customView)
+        }
+        
         setInitialValues()
     }
+    
     
     func setInitialValues(){
 //        print("NodeView Init")
@@ -113,8 +127,8 @@ class NodeView: UIView {
     
     func sendButtonPushToDelegate(buttonView: NodeInputOutputButton){
         
-        if let delegate = delegate {
-            delegate.nodeButtonWasClickedWithType(buttonView.inOutButtonType!, fromNodeView: self)
+        if delegate != nil {
+            delegate!.nodeButtonWasClickedWithType(buttonView.inOutButtonType!, fromNodeView: self)
         }
         
     }
