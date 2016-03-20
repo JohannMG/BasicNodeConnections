@@ -127,10 +127,7 @@ class NodeView: UIView {
     
     func sendButtonPushToDelegate(buttonView: NodeInputOutputButton){
         
-        if delegate != nil {
-            delegate!.nodeButtonWasClickedWithType(buttonView.inOutButtonType!, fromNodeView: self)
-        }
-        
+        delegate?.nodeButtonWasClickedWithType(buttonView.inOutButtonType!, fromNodeView: self)
     }
     
     
